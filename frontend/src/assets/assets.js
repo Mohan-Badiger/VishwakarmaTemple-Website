@@ -6,7 +6,7 @@ import circle from './circle.png';
 import circle2 from './circle2.png';
 import Hero_bg from './Hero_bg.jpg';
 import Lord2 from './lord2.png';
-import Kalika from './kalika.png';
+import Kalika from './Kalika.png';
 import Mouneshwara from './Mouneshwara.png'
 import flower from './flower.png'
 
