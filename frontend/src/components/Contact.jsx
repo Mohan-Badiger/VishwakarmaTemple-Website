@@ -29,7 +29,7 @@ export default function Contact() {
 
 
     return (
-        <div id="contact" className="w-full md:px-[12%] py-10 scroll-mt-20 bg-[url('./assets/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none font-outfit mb-10">
+        <div id="contact" className="w-full px-5 md:px-[12%] py-10 scroll-mt-20 bg-[url('./assets/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none font-outfit mb-10">
 
             <h4 className="text-center text-yellow-800 mb-2 text-lg font-cinzel">Connect with me</h4>
             <h2 className="text-center text-yellow-800 text-5xl font-cinzel">Get in touch</h2>
