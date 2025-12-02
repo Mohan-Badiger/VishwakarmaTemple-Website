@@ -14,7 +14,7 @@ const SubHero = () => {
   return (
     <div className="flex flex-col items-center space-y-4 mt-5 mb-10">
       {/* Main media (video OR image) */}
-      <div className="w-[60vw] max-w-7xl">
+      <div className="md:w-[60vw] max-w-7xl">
         {isVideo(mainSrc) ? (
           <video
             src={mainSrc}

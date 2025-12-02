@@ -83,7 +83,7 @@ const Photos = () => {
     }, []);
 
     return (
-        <section className="w-full py-16 md:py-10 font-outfit">
+        <section className="w-full py-6 md:py-10 font-outfit">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Heading */}
                 <div className="mb-10">
