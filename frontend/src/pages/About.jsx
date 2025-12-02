@@ -7,8 +7,8 @@ const About = () => {
   return (
     <div>
     <SubHero/>
-    <YouthCommittee/>
-    <WomanCommittee/>
+    {/* <YouthCommittee/>
+    <WomanCommittee/> */}
     </div>
   )
 }

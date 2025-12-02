@@ -31,8 +31,14 @@ const Footer = () => {
               ಶ್ರೀ ವಿಶ್ವಕರ್ಮ ದೇವಸ್ಥಾನ, ಲಕ್ಷ್ಮೀ ನಗರ, ಬನಹಟ್ಟಿ.
             </p>
             <p className="mt-4 text-center text-gray-700 lg:text-left lg:text-lg">
-                    Dedicated to Lord Vishwakarma – the divine architect of the universe. This temple serves as a spiritual home for all artisans, craftsmen, and devotees.
+                    Dedicated to Lord Vishwakarma – the divine architect of the universe.
             </p>
+            <p className="mt-2 text-center text-yellow-700 lg:text-left lg:text-lg">
+                   Designed & Developed by Mohan Badiger
+            </p>
+            <a target='_blank' href='https://mohanbadiger.vercel.app' className="mt-2 text-center text-blue-900 lg:text-left lg:text-md flex items-center gap-1">
+                   Click here to reachout <svg width="18px" height="18px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#1565C0" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path d="M21 9.00001L21 3.00001M21 3.00001H15M21 3.00001L12 12M10 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V14" stroke="#1e00b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </a>
 
             <div className="mt-6 flex justify-center gap-4 lg:justify-start">
               {[ 'Facebook', 'Instagram', 'Twitter', 'GitHub', 'Dribbble' ].map((name, i) => (

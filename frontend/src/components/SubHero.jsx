@@ -1,43 +1,73 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from "react";
+import { aboutimages } from "../assets/assets";
+import vid1t from '../assets/pto1.jpg'
 
 const SubHero = () => {
+  const media = useMemo(() => Object.values(aboutimages), []);
 
-    const images = [
-        "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide1.png",
-        "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide2.png",
-        "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide3.png",
-        "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide4.png",
-    ];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    const [mainImage, setMainImage] = useState(images[0]);
+  const mainSrc = media[currentIndex];
 
-    return (
-        <>
-            <div className="flex flex-col items-center space-y-4 mt-5 mb-15">
-                {/* Main Image */}
-                <div className="w-full max-w-7xl">
-                    <img
-                        src={mainImage}
-                        alt="Main"
-                        className="w-full rounded-lg transition-all duration-300"
-                    />
-                </div>
+  const isVideo = (src) => src.endsWith(".mp4");
 
-                {/* Thumbnail Images */}
-                <div className="grid grid-cols-4 max-w-3xl gap-4">
-                    {images.map((img, index) => (
-                        <img
-                            key={index}
-                            src={img}
-                            alt={`Thumb ${index + 1}`}
-                            onClick={() => setMainImage(img)}
-                            className="rounded-lg md:h-24 h-14 object-cover cursor-pointer hover:opacity-80 border-2 border-transparent hover:border-yellow-600"
-                        />
-                    ))}
-                </div>
-            </div>
-        </>
-    )
-}
+  return (
+    <div className="flex flex-col items-center space-y-4 mt-5 mb-10">
+      {/* Main media (video OR image) */}
+      <div className="w-[60vw] max-w-7xl">
+        {isVideo(mainSrc) ? (
+          <video
+            src={mainSrc}
+            className="w-full h-[460px] rounded-lg object-cover"
+            autoPlay
+            muted
+            loop
+            controls
+          />
+        ) : (
+          <img
+            src={mainSrc}
+            alt="Main"
+            className="w-full h-[460px] rounded-lg object-cover"
+          />
+        )}
+      </div>
 
-export default SubHero
+      {/* Thumbnails */}
+      <div className="grid grid-cols-4 max-w-3xl gap-2">
+        {media.map((src, index) =>
+          isVideo(src) ? (
+            <video
+              key={index}
+              src={src}
+              poster={vid1t}
+              onClick={() => setCurrentIndex(index)}
+              className={
+                "rounded-lg md:h-20 h-10 md:w-20 w-10 object-cover cursor-pointer border-2 " +
+                (index === currentIndex
+                  ? "border-yellow-600"
+                  : "border-transparent hover:border-yellow-600 hover:opacity-80")
+              }
+              muted
+            />
+          ) : (
+            <img
+              key={index}
+              src={src}
+              alt={`Thumb ${index + 1}`}
+              onClick={() => setCurrentIndex(index)}
+              className={
+                "rounded-lg md:h-20 h-10 md:w-20 w-10 object-cover cursor-pointer border-2 " +
+                (index === currentIndex
+                  ? "border-yellow-600"
+                  : "border-transparent hover:border-yellow-600 hover:opacity-80")
+              }
+            />
+          )
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default SubHero;
