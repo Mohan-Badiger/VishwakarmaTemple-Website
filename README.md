@@ -22,10 +22,6 @@ Vishwakarma Temple
 - ESLint / Prettier
 
 ---
-
-
----
-
 ## ⚙️ Installation & Setup
 
 Clone the repository:
@@ -129,9 +125,3 @@ This project is licensed under the MIT License.
 
 **Your Name**
 GitHub: github.com/Mohan-Badiger
-
-```
-
-
-Just tell me your project type 👍
-```
