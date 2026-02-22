@@ -109,12 +109,6 @@ Contributions are welcome!
 
 ---
 
-## 🐞 Issues
-
-If you find a bug, please open an issue.
-
----
-
 ## 📜 License
 
 This project is licensed under the MIT License.
